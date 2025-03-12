@@ -6,7 +6,10 @@ function Estudios() {
   return (
     <section className="page">
       <div className="page-left">
-        <h1 className="page-title">Formación Académica</h1>
+        <div className="page-left-header">
+          <img src={logoEstudios} alt="Estudios Logo" id="logo-header" />
+          <h1 className="page-title">Formación Académica</h1>
+        </div>
         <p className="page-text">
           Mi formación en desarrollo Front-End incluye tecnologías como HTML, CSS, JavaScript, 
           React y otras herramientas modernas para la creación de aplicaciones web.
@@ -14,7 +17,7 @@ function Estudios() {
       </div>
 
       <div className="page-right">
-        <img src={logoEstudios} alt="Estudios Logo" />
+        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" />
       </div>
     </section>
   );

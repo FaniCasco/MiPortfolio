@@ -1,12 +1,12 @@
 .page {
     width: 100%;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    height: 100vh; /* Ajustado a la pantalla */
+    height: 100vh;
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Espaciado uniforme */
+    align-items: center;
+    justify-content: space-between;
     padding: 1rem 5rem;
-    gap: 3rem; /* Espacio entre elementos */
+    gap: 3rem;
 }
 
 .page-left {
@@ -43,3 +43,42 @@
     margin: -16rem -10rem 0 0;
 }
 
+#logo-header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 10px;
+    }
+
+    .page-left {
+        width: 100%;
+        margin-top: 0;
+    }
+
+ 
+    /* Estilos para pantallas de 768px o menos (responsive) */
+    .page-left-header {
+        display: flex; /* Muestra el header en pantallas pequeñas */
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .page-left-header img {
+        width: 50px;
+        margin-right: 1rem;
+    }
+
+    .page-right {
+        display: none; /* Oculta el logo de la derecha en responsive */
+    }
+    #logo-header {
+        display: block;
+    }
+    #logo-bottom{
+        display: none;
+    }
+}

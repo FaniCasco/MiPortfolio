@@ -6,7 +6,10 @@ function Projects() {
   return (
     <section className="page">
       <div className="page-left">
-        <h1 className="page-title">Mis Proyectos</h1>
+        <div className="page-left-header">
+          <img src={logoProjects} alt="Projects Logo" id="logo-header" />
+          <h1 className="page-title">Mis Proyectos</h1>
+        </div>
         <p className="page-text">
           He desarrollado diversas aplicaciones web enfocadas en optimizar flujos 
           de trabajo y mejorar la experiencia de usuario. Aquí puedes ver algunos de ellos.
@@ -14,7 +17,7 @@ function Projects() {
       </div>
 
       <div className="page-right">
-        <img src={logoProjects} alt="Projects Logo" />
+        <img src={logoProjects} alt="Projects Logo" id="logo-bottom" />
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/contact.css";
-import "../styles/pages.css";
+import "../styles/pages.css"; // Asegúrate de importar también el CSS de pages
 import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
@@ -8,11 +8,13 @@ function Contact() {
     <section className="page-contact">
       {/* Sección Izquierda: Información de Contacto */}
       <div className="page-left-contact">
-        <h1 className="page-title-contact">Contacto</h1>
-
+        <div className="page-left-header">
+          <img src={logoContact} alt="Contact Logo" id="logo-header" />
+          <h1 className="page-title-contact">Contacto</h1>
+        </div>
 
         <form className="contact-form" action="https://formsubmit.co/fanymar@live.com" method="POST">
-
+          {/* ... (resto del formulario) ... */}
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
             <input type="text" id="name" name="name" placeholder="Tu nombre" required />
@@ -43,7 +45,7 @@ function Contact() {
 
       {/* Sección Derecha: Imagen */}
       <div className="page-right">
-        <img src={logoContact} alt="Contact Logo" />
+        <img src={logoContact} alt="Contact Logo" id="logo-bottom" />
       </div>
     </section>
   );

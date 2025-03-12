@@ -6,8 +6,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5rem;
- 
-   
 }
 
 .page-left-contact {
@@ -15,22 +13,19 @@
     color: wheat;
     text-align: left;
     margin-top: -10rem;
-   
 }
 
 .page-title-contact {
     font-family: "Karla", sans-serif;
     font-size: 3rem;
     color: #f5deb3;
-
 }
-
 
 /* Formulario más pequeño */
 .contact-form {
     margin: 0 0 4rem 0;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     width: 100%;
     background-color: #f1dfb4;
     padding: 5px;
@@ -74,7 +69,6 @@
 }
 
 .form-button {
-    
     text-decoration: none;
     background-color: #a6c7d9;
     text-decoration: none;
@@ -102,7 +96,35 @@
 }
 
 .page-right img {
-    width: 300px; /* Tamaño ajustado */
-    max-width: 100%;
-    margin-top: -10rem;
+    width: 300px; /* Tamaño ajustado
+    height: 300px; */
+}
+
+@media screen and (max-width: 768px) {
+    .page-contact {
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 1rem;
+    }
+
+    .page-left-contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .page-title-contact {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.7rem;
+    }
+    
 }

@@ -7,7 +7,10 @@ function About() {
     <section className="page">
       {/* Sección Izquierda */}
       <div className="page-left">
-        <h1 className="page-title">Sobre Mí</h1>
+        <div className="page-left-header">
+          <img src={logoAbout} alt="About Logo" id="logo-header" />
+          <h1 className="page-title">Sobre Mí</h1>
+        </div>
         <p className="page-text">
           Como desarrolladora Front-End, estoy en constante evolución y cuento con 
           una sólida formación en tecnologías web. Mi capacidad para gestionar 
@@ -17,7 +20,7 @@ function About() {
 
       {/* Sección Derecha */}
       <div className="page-right">
-        <img src={logoAbout} alt="About Logo" />
+        <img src={logoAbout} alt="About Logo" id="logo-bottom"/>
       </div>
     </section>
   );
