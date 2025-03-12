@@ -8,7 +8,7 @@ function Projects() {
       <div className="page-left">
         <div className="page-left-header">
           <img src={logoProjects} alt="Projects Logo" id="logo-header" />
-          <h1 className="page-title">Mis Proyectos</h1>
+          <h1 className="page-title">Proyectos</h1>
         </div>
         <p className="page-text">
           He desarrollado diversas aplicaciones web enfocadas en optimizar flujos 
