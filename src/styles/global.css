@@ -178,6 +178,13 @@ body {
         text-align: center;
         height: auto;
     }
+    .hero span {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin: 0 auto;
+    }
 
     .hero-left, .hero-right {
         width: 100%;
@@ -185,8 +192,10 @@ body {
     }
 
     .hero-left {
-        margin-top: 5rem;
+        margin-top: 4rem;
         align-items: center;
+        justify-content: center;
+        
     }
 
     .hero-greeting {
@@ -194,10 +203,11 @@ body {
     }
 
     .hero-name {
+      
         font-size: 4rem;
     }
     .hero-right img {
-        margin: 0;
+        margin: 0 0 8rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
