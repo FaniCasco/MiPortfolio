@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/contact.css";
-import "../styles/pages.css"; // Asegúrate de importar también el CSS de pages
+import "../styles/pages.css"; 
 import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
@@ -13,7 +13,28 @@ function Contact() {
           <h1 className="page-title-contact">Contacto</h1>
         </div>
 
-        <form className="contact-form" action="https://formsubmit.co/fanymar@live.com" method="POST">
+        <form className="contact-form"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            try {
+              const response = await fetch('/api/sendEmail', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(Object.fromEntries(formData)),
+              });
+
+              if (response.ok) {
+                alert('Mensaje enviado con éxito');
+                e.target.reset();
+              }
+            } catch (error) {
+              alert('Error al enviar el mensaje');
+            }
+          }}>
           {/* ... (resto del formulario) ... */}
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
