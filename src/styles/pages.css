@@ -1,0 +1,45 @@
+.page {
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    height: 100vh; /* Ajustado a la pantalla */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Espaciado uniforme */
+    padding: 1rem 5rem;
+    gap: 3rem; /* Espacio entre elementos */
+}
+
+.page-left {
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin-top: -20rem;
+}
+
+.page-title {
+    font-family: "Karla", sans-serif;
+    font-size: 3rem;
+    color: #f5deb3;
+}
+
+.page-text {
+    font-family: "Karla", sans-serif;
+    font-size: 1.2rem;
+    color: wheat;
+    margin-top: 1rem;
+}
+
+.page-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-right img {
+    width: 300px;
+    max-width: 80%;
+    height: auto;
+    margin: -16rem -10rem 0 0;
+}
+

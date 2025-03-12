@@ -1,0 +1,108 @@
+.page-contact {
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    height: 110vh; /* Reducido el alto total */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+ 
+   
+}
+
+.page-left-contact {
+    width: 50%;
+    color: wheat;
+    text-align: left;
+    margin-top: -10rem;
+   
+}
+
+.page-title-contact {
+    font-family: "Karla", sans-serif;
+    font-size: 3rem;
+    color: #f5deb3;
+
+}
+
+
+/* Formulario más pequeño */
+.contact-form {
+    margin: 0 0 4rem 0;
+    display: flex;
+    flex-direction: column;   
+    width: 100%;
+    background-color: #f1dfb4;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 -3px 5px rgba(255, 255, 255, 3.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: wheat;
+    margin-bottom: -8px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    background-color: #1a1a2e;
+    color: white;
+    outline: none;
+}
+
+/* Reducir tamaño del textarea */
+.form-group textarea {
+    resize: none;
+    height: 60px; /* Más compacto */
+}
+
+/* Botón centrado y con margen */
+.form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+
+.form-button {
+    
+    text-decoration: none;
+    background-color: #a6c7d9;
+    text-decoration: none;
+    color: #120b13;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    padding: 5px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    font-family: "karla", sans-serif;
+    font-weight: 500;
+}
+
+.form-button:hover{
+    background-color: #120b13;
+    color: wheat;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.page-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-right img {
+    width: 300px; /* Tamaño ajustado */
+    max-width: 100%;
+    margin-top: -10rem;
+}
