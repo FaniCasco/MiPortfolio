@@ -1,3 +1,4 @@
+//mi-portafolio/src/pages/contact.js
 import React, { useState } from "react";
 import "../styles/contact.css";
 import "../styles/pages.css";
@@ -9,38 +10,35 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
-    const formData = new FormData(e.target);
-    const email = formData.get("email");
-
-    // Validación básica de email
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      alert("Por favor ingresa un email válido");
-      setIsSending(false);
-      return;
-    }
-
+    
     try {
-      const response = await fetch("http://localhost:5000/api/sendEmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData)),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Error en el servidor");
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+  
+      // Validación mejorada
+      if (!/\S+@\S+\.\S+/.test(data.email)) {
+        throw new Error('Email inválido');
       }
-
-      alert("Mensaje enviado con éxito!");
+  
+      const response = await fetch('http://localhost:5000/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Error en el servidor');
+      }
+  
+      alert('Mensaje enviado exitosamente!');
       e.target.reset();
     } catch (error) {
-      alert(error.message || "Error al enviar el mensaje");
+      alert(error.message || 'Error al enviar el mensaje');
     } finally {
       setIsSending(false);
     }
   };
-
   return (
     <section className="page-contact">
       {/* Sección Izquierda: Información de Contacto */}
