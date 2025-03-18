@@ -7,6 +7,11 @@
     justify-content: space-between;
     padding: 0 5rem;
 }
+.mje-success {
+    font-family: "Karla", sans-serif;
+    font-size: 2rem;
+    color: #f5deb3;
+}
 
 .page-left-contact {
     width: 50%;
