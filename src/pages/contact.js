@@ -1,4 +1,3 @@
-//mi-portafolio/src/pages/contact.js
 import React, { useState } from "react";
 import "../styles/contact.css";
 import "../styles/pages.css";
@@ -20,10 +19,13 @@ function Contact() {
         throw new Error('Email inválido');
       }
   
-      const response = await fetch('http://localhost:5000/api/sendEmail', {
+      // FormSubmit URL de destino
+      const formSubmitURL = "https://formsubmit.co/fanymar@live.com";  // Reemplaza con tu correo en FormSubmit
+
+      const response = await fetch(formSubmitURL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Accept': 'application/json' },
+        body: new URLSearchParams(data)
       });
   
       if (!response.ok) {
@@ -39,6 +41,7 @@ function Contact() {
       setIsSending(false);
     }
   };
+
   return (
     <section className="page-contact">
       {/* Sección Izquierda: Información de Contacto */}
