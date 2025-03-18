@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "../styles/contact.css";
 import "../styles/pages.css";
-//import logoContact from "../assets/images/logo-contact.png";
+import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
   const [isSending, setIsSending] = useState(false);
@@ -44,7 +44,7 @@ function Contact() {
       {/* Sección Izquierda: Información de Contacto */}
       <div className="page-left-contact">
         <div className="page-left-header">
-          <img src="/images/logo-contact.png" alt="Contact Logo" id="logo-header" />
+          <img src={logoContact} alt="Contact Logo" id="logo-header" />
           <h1 className="page-title-contact">Contacto</h1>
         </div>
 
@@ -118,7 +118,7 @@ function Contact() {
 
       {/* Sección Derecha: Imagen */}
       <div className="page-right">
-        <img src="/images/logo-contact.png" alt="Contact Logo" id="logo-bottom" />
+        <img src={logoContact} alt="Contact Logo" id="logo-bottom" />
       </div>
     </section>
   );
