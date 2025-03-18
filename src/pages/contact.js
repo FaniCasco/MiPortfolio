@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//import { useForm } from '@formspree/react';
 import "../styles/contact.css";
 import "../styles/pages.css";
 import logoContact from "../assets/images/logo-contact.png";
@@ -9,34 +10,26 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
+
+    // El formulario se enviará automáticamente con el método POST usando Formspree
+    const form = e.target;
+    const formData = new FormData(form);
     
     try {
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData);
-  
-      // Validación mejorada
-      if (!/\S+@\S+\.\S+/.test(data.email)) {
-        throw new Error('Email inválido');
-      }
-  
-      // FormSubmit URL de destino
-      const formSubmitURL = "https://formsubmit.co/fanymar@live.com";  // Reemplaza con tu correo en FormSubmit
-
-      const response = await fetch(formSubmitURL, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new URLSearchParams(data)
+      // Envía los datos a la URL de Formspree
+      const response = await fetch("https://formspree.io/f/xdkekqpg", {
+        method: "POST",
+        body: formData,
       });
-  
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Error en el servidor');
+
+      if (response.ok) {
+        alert("Mensaje enviado exitosamente!");
+        form.reset();
+      } else {
+        throw new Error("Error al enviar el formulario");
       }
-  
-      alert('Mensaje enviado exitosamente!');
-      e.target.reset();
     } catch (error) {
-      alert(error.message || 'Error al enviar el mensaje');
+      alert(error.message || "Error al enviar el mensaje");
     } finally {
       setIsSending(false);
     }
@@ -51,7 +44,7 @@ function Contact() {
           <h1 className="page-title-contact">Contacto</h1>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} method="POST">
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
             <input
@@ -82,7 +75,7 @@ function Contact() {
               type="email"
               id="email"
               name="email"
-              placeholder="tucorreo@email.com"
+              placeholder="fanymar@live.com"
               required
               disabled={isSending}
             />
