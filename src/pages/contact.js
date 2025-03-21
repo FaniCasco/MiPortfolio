@@ -32,7 +32,7 @@ function Contact() {
         <form className="contact-form" onSubmit={handleSubmit}>
           {/* Evitar que Formspree bloquee mensajes como spam */}
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="g-recaptcha-response" value={captchaValue} />
+          <input type="hidden" name="g-recaptcha" value={captchaValue} />
 
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
