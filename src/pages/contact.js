@@ -36,29 +36,29 @@ function Contact() {
 
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
-            <input type="text" id="name" name="name" required disabled={state.submitting} />
+            <input type="text" id="name" name="name" placeholder="Nombre" required disabled={state.submitting} />
           </div>
 
           <div className="form-group">
             <label htmlFor="lastname">Apellido</label>
-            <input type="text" id="lastname" name="lastname" required disabled={state.submitting} />
+            <input type="text" id="lastname" name="lastname" placeholder="Apellido" required disabled={state.submitting} />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Correo Electrónico</label>
-            <input id="email" type="email" name="_replyto" required disabled={state.submitting} />
+            <input id="email" type="email" name="_replyto" placeholder="E-mail" required disabled={state.submitting} />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" required disabled={state.submitting}></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje" disabled={state.submitting}></textarea>
             <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
 
           {/* reCAPTCHA v3 */}
           <ReCAPTCHA
-            sitekey="6Le0HfwqAAAAANYyFS12XeQnvqjglrhG-3BjLDp7"  // TU CLAVE DEL SITIO
+            sitekey="6LfB2vsqAAAAAAfk9vURkznEOtvr43iyiZQpAxGu"  // TU CLAVE DEL SITIO
             onChange={handleCaptchaChange}
           />
 
