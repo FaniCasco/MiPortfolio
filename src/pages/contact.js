@@ -1,22 +1,40 @@
 import React, { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
 import "../styles/pages.css";
 import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
-  const [state, handleSubmit] = useForm("xdkekqpg");
-  const [captchaValue, setCaptchaValue] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
-  const handleCaptchaChange = (value) => {
-    setCaptchaValue(value);  // Guarda el token de reCAPTCHA
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_ibm1a4j", // Reemplaza con tu Service ID de EmailJS
+        "template_s9fon5g", // Reemplaza con tu Template ID
+        e.target,
+        "Xs_5gpoybEQ3MDsCi" // Reemplaza con tu Public Key
+      )
+      .then(
+        () => {
+          setMessageSent(true);
+          setLoading(false);
+        },
+        (error) => {
+          console.error("Error:", error.text);
+          setLoading(false);
+        }
+      );
   };
 
-  if (state.succeeded) {
+  if (messageSent) {
     return (
       <section className="page-contact">
-        <p className="mje-success">Mensaje enviado exitosamente!</p>
+        <p className="mje-success">¡Mensaje enviado exitosamente!</p>
       </section>
     );
   }
@@ -30,50 +48,28 @@ function Contact() {
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          {/* Evitar que Formspree bloquee mensajes como spam */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="g-recaptcha" value={captchaValue} />
-
           <div className="form-group">
             <label htmlFor="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Nombre" required disabled={state.submitting} />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="lastname">Apellido</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Apellido" required disabled={state.submitting} />
+            <input type="text" id="name" name="name" placeholder="Nombre" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Correo Electrónico</label>
-            <input id="email" type="email" name="_replyto" placeholder="E-mail" required disabled={state.submitting} />
-            <ValidationError prefix="Email" field="email" errors={state.errors} />
+            <input type="email" id="email" name="email" placeholder="E-mail" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje" disabled={state.submitting}></textarea>
-            <ValidationError prefix="Message" field="message" errors={state.errors} />
+            <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje"></textarea>
           </div>
 
-          {/* reCAPTCHA v3 */}
-          <ReCAPTCHA
-            sitekey="6LfB2vsqAAAAAAfk9vURkznEOtvr43iyiZQpAxGu"  // TU CLAVE DEL SITIO
-            onChange={handleCaptchaChange}
-          />
-
           <div className="form-button-container">
-            <button type="submit" className="form-button" disabled={!captchaValue || state.submitting}>
-              {state.submitting ? (
-                <>
-                  <span className="spinner"></span> Enviando...
-                </>
-              ) : (
-                "Enviar Mensaje"
-              )}
+            <button type="submit" className="form-button" disabled={loading}>
+              {loading ? "Enviando..." : "Enviar Mensaje"}
             </button>
           </div>
         </form>
+
       </div>
 
       <div className="page-right">
