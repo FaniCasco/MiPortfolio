@@ -1,0 +1,10 @@
+body {
+    position: relative; /* Necesario para footer fijo */
+    min-height: 100vh;
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 150px; /* Espacio inicial para footer */
+}

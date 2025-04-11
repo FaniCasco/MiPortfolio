@@ -12,9 +12,14 @@ function About() {
           <h1 className="page-title">Sobre Mí</h1>
         </div>
         <p className="page-text">
-          Como desarrolladora Front-End, estoy en constante evolución y cuento con 
-          una sólida formación en tecnologías web. Mi capacidad para gestionar 
-          proyectos de forma autónoma me permite ofrecer soluciones efectivas.  
+        Desarrolladora Front-End Jr con experiencia liderando equipos y creando
+         aplicaciones funcionales. Mis años trabajando en ventas, costura y arte 
+         me dieron experiencia en: atención al detalle, creatividad para resolver
+          problemas y paciencia para tejer soluciones desde cero. 
+          Actualmente trabajo en aplicaciones de gestión de clientes mientras
+           busco empleo en una empresa donde pueda formar parte de un equipo IT 
+           para seguir aprendiendo, aportar ideas frescas y crecer profesionalmente 
+           mientras construimos cosas útiles juntos. 
         </p>
       </div>
 

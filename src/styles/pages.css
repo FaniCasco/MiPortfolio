@@ -13,7 +13,8 @@
     width: 50%;
     color: white;
     text-align: left;
-    margin-top: -20rem;
+    margin-top: -12rem;
+    
 }
 
 .page-title {
@@ -40,7 +41,7 @@
     width: 300px;
     max-width: 80%;
     height: auto;
-    margin: -16rem -10rem 0 0;
+    margin: -12rem -10rem 0 0;
 }
 
 #logo-header {
@@ -94,39 +95,68 @@
   }
   
 /**/
-
 @media (max-width: 768px) {
     .page {
         flex-direction: column;
-        padding: 1rem 2rem;
-        gap: 10px;
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1.5rem;
+        gap: 1rem;
+        overflow: visible;
+    }
+    .page {
+        min-height: calc(100vh + 100px); /* Añade espacio extra */
+        padding-bottom: 80px; /* Espacio para el footer */
     }
 
     .page-left {
         width: 100%;
-        margin-top: 0;
+        margin: 0;
     }
 
- 
-    /* Estilos para pantallas de 768px o menos (responsive) */
     .page-left-header {
-        display: flex; /* Muestra el header en pantallas pequeñas */
+        display: flex;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .page-left-header img {
-        width: 50px;
+        width: 45px;
         margin-right: 1rem;
     }
 
-    .page-right {
-        display: none; /* Oculta el logo de la derecha en responsive */
+    .page-title {
+        font-size: 2.2rem;
     }
+
+    .page-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0.5rem 0 1.5rem;
+    }
+
+    .page-right,
+    #logo-bottom {
+        display: none;
+    }
+
     #logo-header {
         display: block;
     }
-    #logo-bottom{
-        display: none;
+}
+/* Breakpoint específico para pantallas muy pequeñas */
+@media (max-width: 468px) {
+    .page {
+        min-height: calc(100vh + 150px); /* Más altura de seguridad */
+        padding-bottom: 100px; /* Ajuste para footer alto */
+        padding-top: 1.5rem;
+    }
+    
+    .page-text {
+        margin-bottom: 2.5rem; /* Espacio adicional al final del texto */
+    }
+    
+    .page-left {
+        margin-bottom: 2rem;
     }
 }
