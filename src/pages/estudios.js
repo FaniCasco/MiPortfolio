@@ -1,41 +1,99 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "../styles/pages.css";
+import "../styles/estudios.css";
 import logoEstudios from "../assets/images/logo-formacion.png";
+import certificado1 from "../assets/certificados/fullstack-cilsa.png";
+import certificado2 from "../assets/certificados/intensivo-javascript.pdf";
+import certificado3 from "../assets/certificados/Diploma_CAC-python.pdf";
+import certificado4 from "../assets/certificados/Diploma_CAC-agile.pdf";
+//import certidicado5 from "../assets/certificados/Diploma_CAC-agile.pdf";
+
 
 const cursos = [
-  { titulo: "React Avanzado", institucion: "Platzi", fecha: "2023", descripcion: "Curso de React con hooks y optimización de performance.", icono: "bi bi-code-slash" },
-  { titulo: "JavaScript Moderno", institucion: "Udemy", fecha: "2022", descripcion: "Profundización en ES6+, asincronía y buenas prácticas.", icono: "bi bi-file-code" },
-  { titulo: "CSS Flexbox y Grid", institucion: "Coderhouse", fecha: "2021", descripcion: "Maquetación avanzada con CSS moderno.", icono: "bi bi-palette" }
+  { 
+    titulo: "BOOTCAMP FULLSTACK", 
+    institucion: "CILSA", 
+    fecha: "Agosto a Diciembre 2024", 
+    descripcion: "Adquirí habilidades en desarrollo web integral, dominando tecnologías como React.js para frontend y Node.js con Express.js para backend. Implementé bases de datos SQL/NoSQL, maquetación responsive con Bootstrap, y control de versiones mediante Git. Apliqué metodologías ágiles (Scrum) en proyectos reales, desde despliegue en hosting hasta integración full stack, culminando en una aplicación completa con autenticación, gestión de datos y trabajo colaborativo.",
+    icono: "bi bi-stack",
+    certificado: certificado1 // Referencia directa
+  },
+  { 
+    titulo: "JAVASCRIPT INTENSIVO", 
+    institucion: "CILSA", 
+    fecha: "Octubre a Noviembre 2024", 
+    descripcion: "El objetivo de este curso fue reforzar los conceptos básicos sobre programación con el lenguaje JavaScript desde lo más básico como son variables, tipos de datos, hasta las funciones e introducción al DOM.",
+    icono: "bi bi-stack",
+    certificado: certificado2 // Referencia directa
+  },
+  { 
+    titulo: "PROGRAMACIÓN INICIAL CON PYTHON", 
+    institucion: "CODO A CODO 4.0", 
+    fecha: "Febrero a Julio de 2024", 
+    descripcion: "Adquirí fundamentos esenciales de programación mediante Python, iniciando con lógica algorítmica utilizando PSeInt para el diseño de pseudocódigo y diagramas de flujo. El curso cubrió estructuras de control, funciones y modularización, enfocándose en la resolución de problemas con enfoque estructurado. Además, desarrollé interfaces gráficas básicas con Tkinter, creando aplicaciones funcionales.",
+    icono: "bi bi-stack",
+    certificado: certificado3 // Referencia directa
+  },
+  { 
+    titulo: "Especializaciones:  AGILE Y SCRUM y HABILIDADES BLANDAS ", 
+    institucion: "CODO A CODO 4.0", 
+    fecha: "2023-2024", 
+    descripcion: "Adquirí conocimientos esenciales en metodologías ágiles, como los fundamentos de Scrum (roles, eventos y artefactos), técnicas para gestionar historias de usuario y herramientas de coaching. El curso incluyó una introducción a marcos complementarios como Kanban, Lean, XP y TDD, enfocándose en la mejora continua y la entrega eficiente de proyectos en entornos colaborativos.",
+    icono: "bi bi-stack",
+    certificado: certificado4 // Referencia directa
+  },
+  // ... otros cursos
 ];
 
 function Estudios() {
+  const handleVerCertificado = (certificadoUrl) => {
+    window.open(certificadoUrl, '_blank');
+  };
+
   return (
-    <section className="container py-5">
-      <div className="text-center mb-5">
-        <img src={logoEstudios} alt="Estudios Logo" className="img-fluid mb-3" />
-        <h1 className="fw-bold">Formación Académica</h1>
-        <p>Mi formación en desarrollo Front-End incluye tecnologías como HTML, CSS, JavaScript, React y más.</p>
+    <section className="page">
+      <div className="page-left">
+        <div className="page-left-header">
+          <img src={logoEstudios} alt="Estudios Logo" id="logo-header" />
+          <h1 className="page-title">Formación Académica</h1>
+          <p className="page-text">Estos son todos los cursos y especializaciones que realicé</p>
+        </div>
+
+        <div className="education-container">
+          {cursos.map((curso, index) => (
+            <div key={index} className="education-card">
+              <div className="card-icon">
+                <i className={curso.icono}></i>
+              </div>
+              <div className="card-body">
+                <div className="card-header">
+                  <h5 className="card-title">{curso.titulo}</h5>
+                  <span className="card-institution">{curso.institucion}</span>
+                </div>
+                <div className="card-content">
+                  <p className="card-description">{curso.descripcion}</p>
+                  <div className="card-footer">
+                    <span className="card-date">{curso.fecha}</span>
+                    {curso.certificado && (
+                        <button 
+                          className="certificado-btn"
+                          onClick={() => handleVerCertificado(curso.certificado)}
+                        >
+                          Ver Certificado
+                        </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="timeline">
-        {cursos.map((curso, index) => (
-          <div key={index} className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
-            <div className="timeline-icon">
-              <i className={curso.icono}></i>
-            </div>
-            <div className="timeline-content">
-              <h5 className="fw-bold">{curso.titulo}</h5>
-              <h6 className="text-muted">{curso.institucion} - {curso.fecha}</h6>
-              <p>{curso.descripcion}</p>
-            </div>
-          </div>
-        ))}
+      <div className="page-right">
+        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" />
       </div>
     </section>
   );
 }
 
 export default Estudios;
-

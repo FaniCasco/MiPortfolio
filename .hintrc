@@ -3,6 +3,17 @@
     "development"
   ],
   "hints": {
-    "apple-touch-icons": "off"
+    "apple-touch-icons": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "min-height: auto",
+          "scroll-behavior",
+          "scroll-behavior: smooth"
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,192 @@
+/* Estilos generales para ambas secciones */
+.page {
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    height: auto; /* Añade esto */
+    display: flex;
+    align-items: flex-start; /* Cambia de center a flex-start */
+    padding: 4rem 5rem 6rem; /* Añade padding inferior */
+    overflow: visible; /* Asegura que el contenido no se corte */
+}
+
+.page-left {
+    width: 50%;
+    margin-top: 0; /* Elimina margen negativo */
+    padding-bottom: 3rem; /* Espacio para el contenido */
+}
+.page-right img {
+    margin-top: 0;
+}
+
+.page-title {
+    font-family: "Karla", sans-serif;
+    font-size: 3rem;
+    color: #f5deb3;
+    
+
+}
+
+
+.education-container {
+    margin-top: 2rem;
+    max-height: none; /* Elimina cualquier límite de altura */
+  
+}
+
+.education-card {
+    padding: 2rem 0; /* Más espacio entre tarjetas */
+    margin-bottom: 1.5rem; /* Espaciado adicional */
+}
+.education-card:last-child {
+    border-bottom: none;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #f5deb3;
+    margin-bottom: 0.3rem;
+}
+
+.card-institution {
+    display: block;
+    font-size: 1.1rem;
+    color: #8892b0;
+    margin-bottom: 0.8rem;
+}
+
+.card-description {
+    color: #ccd6f6;
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.card-date {
+    margin-top: 0; /* Elimina margen negativo */
+    float: none; /* Elimina float */
+    color: #d4c19e;
+}
+
+/* Eliminar iconos */
+.card-icon {
+    display: none;
+}
+
+/* Ajustes para el footer de navegación */
+.navigation-footer {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation-footer a {
+    color: #f5deb3;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+/* Estilos para el botón de certificado */
+.certificado-btn {
+    background-color: #f5deb3;
+    color: #1a1a2e;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .certificado-btn:hover {
+    background-color: #d4c19e;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Añade esto para el scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+  /* Ajustes responsive */
+  @media (max-width: 768px) {
+    .certificado-btn {
+      padding: 6px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .card-footer {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .page {
+        flex-direction: column;
+        padding: 2rem 2rem 4rem;
+        height: auto;
+    }
+
+    .page-left, 
+    .page-right {
+        width: 100%;
+    }
+
+    .page-right img {
+        margin: 2rem 0 0;
+        width: 200px;
+    }
+    
+    .page-title {
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .card-date {
+        float: none;
+        display: block;
+        margin-top: 0.5rem;
+    }
+    
+    .navigation-footer {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 2rem 1rem 3rem;
+    }
+    
+    .card-description {
+        font-size: 0.95rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-institution {
+        font-size: 1rem;
+    }
+    .certificado-btn {
+        width: 100%;
+    }
+}
