@@ -96,35 +96,93 @@
     font-size: 1.1rem;
 }
 /* Estilos para el botón de certificado */
-.certificado-btn {
+
+  /* Añade esto para el scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+.certificados-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .certificado-btn {
     background-color: #f5deb3;
     color: #1a1a2e;
     border: none;
     padding: 8px 20px;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: 10px;
   }
   
   .certificado-btn:hover {
     background-color: #d4c19e;
     transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  /* Añade esto para el scroll suave */
-html {
-    scroll-behavior: smooth;
-}
+  .certificado-link {
+    color: #f5deb3;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .certificado-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+/* Añade estos estilos al CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona el dropdown debajo del botón */
+    left: 0;
+    background: #1a1a2e;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-top: 5px; /* Espacio entre botón y dropdown */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
 
+  } 
+ 
+  
+  /* Asegúrate que los enlaces sean clickeables */
+  .dropdown-content a {
+    pointer-events: auto;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   /* Ajustes responsive */
   @media (max-width: 768px) {
     .certificado-btn {
       padding: 6px 15px;
       font-size: 0.9rem;
     }
+    .certificados-container {
+        flex-direction: column;
+      }
+      
+      .certificado-btn {
+        width: 100%;
+        padding: 10px;
+      }
     
     .card-footer {
       flex-direction: column;
