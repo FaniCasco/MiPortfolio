@@ -1,5 +1,83 @@
-.bg-pages {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);    
-    height: 100vh;
-    color: wheat;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* dos columnas fijas */
+    gap: 2rem;
+    justify-content: center; /* centra el grid */
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 900px; /* opcional: límite para que no se estire demasiado */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.projects-section {
+    flex-direction: column;
+    padding: 4rem 5rem 6rem;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.project-card-glass {
+    background: rgba(255, 255, 255, 0.05);
+    /* Transparente */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 2rem;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-card-glass .card-footer {
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* Contenedor general de la sección Proyectos */
+.projects-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    align-items: start;
+}
+
+/* Columna izquierda (texto + tarjetas) */
+.projects-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Responsive: 1 columna en pantallas chicas */
+@media (max-width: 768px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-right {
+        display: block;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .page-right img {
+        margin: 0 auto;
+    }
 }
