@@ -1,32 +1,47 @@
-.projects-grid {
+/* =============================
+   CONTENEDOR PRINCIPAL
+============================= */
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    align-items: start;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  /* =============================
+     CONTENIDO IZQUIERDO
+  ============================= */
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-projects {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 2rem;
+  }
+  
+  /* =============================
+     GRILLA DE CARDS
+  ============================= */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    width: 100%;
     justify-content: center;
     margin-top: 2rem;
-    width: 100%;
-    max-width: 1100px;
-    /* más ancho total */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.projects-section {
-    flex-direction: column;
-    padding: 4rem 5rem 6rem;
-}
-
-.projects-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-
-
-.project-card-glass {
+  }
+  
+  /* =============================
+     CARD INDIVIDUAL
+  ============================= */
+  .project-card-glass {
     background: rgba(255, 255, 255, 0.05);
-    /* Transparente */
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 16px;
@@ -36,69 +51,139 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 500px;
-    /* opcional: evita que se hagan gigantes en pantallas grandes */
     margin: 0 auto;
-    /* centrado dentro de cada columna */
-}
-
-.project-card-glass:hover {
+  }
+  
+  .project-card-glass:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-.project-card-glass .card-footer {
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-institution {
+    font-weight: bold;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .card-description {
+    margin: 1rem 0;
+  }
+  
+  .card-footer {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1rem;
-}
-
-/* Contenedor general de la sección Proyectos */
-.projects-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    width: 100%;
-    align-items: start;
-    
-}
-
-/* Columna izquierda (texto + tarjetas) */
-.projects-content {
+    margin-top: 1rem;
+  }
+  
+  .certificado-btn {
+    background-color: #ffffff10;
+    border: 1px solid #ffffff20;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .certificado-btn:hover {
+    background-color: #ffffff30;
+  }
+  
+  /* =============================
+     COLUMNA DERECHA (IMAGEN)
+  ============================= */
+  .page-right {
     display: flex;
-    flex-direction: column;
-}
-
-
-.page-right img {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .page-right img {
     width: 100%;
     max-width: 300px;
-    /* o lo que necesites */
     height: auto;
     margin: 0 auto;
-    /* centra horizontalmente */
-}
-
-.text-projects {
-    width: 80%;
-}
-
-/* Responsive: 1 columna en pantallas chicas */
-@media (max-width: 768px) {
+  }
+  
+  /* =============================
+     ENCABEZADO DE LA SECCIÓN
+  ============================= */
+  .projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .section-logo {
+    display: none; /* Ocultamos el logo en pantallas grandes */
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    color: #fefefe;
+    font-weight: bold;
+    text-align: center;
+  }
+  /* =============================
+     RESPONSIVE (MOBILE FRIENDLY)
+  ============================= */
+  @media (max-width: 1024px) {
     .projects-container {
-        display: flex;
-        flex-direction: column;
+      grid-template-columns: 1fr;
     }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
+  
     .page-right {
-        display: block;
-        margin-top: 2rem;
-        text-align: center;
+      margin-top: 2rem;
+      text-align: center;
     }
-
+  
     .page-right img {
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      margin: 0 auto;
     }
-}
+  
+    .text-projects {
+      max-width: 100%;
+    }
+  
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+  /* En pantallas chicas (responsive) mostramos logo + título en fila */
+@media (max-width: 768px) {
+    .section-header {
+      justify-content: flex-start;
+      text-align: left;
+      padding-left: 1rem;
+    }
+  
+    .section-logo {
+      display: block;
+      width: 35px;
+      height: auto;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }

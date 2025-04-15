@@ -71,12 +71,16 @@ function Projects() {
     <section className="page">
       <div className="projects-container">
         <div className="projects-content">
-          <h1 className="page-title">Proyectos</h1>
+          <div className="section-header">
+            <img src={logoProjects} alt="Logo proyectos" className="section-logo" />
+            <h1 className="section-title">Proyectos</h1>
+          </div>
+
           <p className="page-text text-projects">
             A continuación podés ver una selección de proyectos que reflejan mi evolución
-            como desarrolladora web. <br/>
-            Empecé creando una tienda e-commerce utilizando HTML5, CSS3 y Bootstrap, y 
-            con el tiempo fui incorporando tecnologías modernas como React, Node.js y bases de datos. <br/>
+            como desarrolladora web. <br />
+            Empecé creando una tienda e-commerce utilizando HTML5, CSS3 y Bootstrap, y
+            con el tiempo fui incorporando tecnologías modernas como React, Node.js y bases de datos. <br />
             Cada proyecto cuenta una parte del camino, desde los primeros pasos hasta los desafíos más
             actuales.
           </p>
@@ -87,7 +91,7 @@ function Projects() {
                 <h2 className="card-title">{proj.title}</h2>
                 <span className="card-institution">{proj.techs}</span>
                 <p className="card-description">{proj.description}</p>
-                
+
                 <div className="card-footer">
                   <a className="certificado-btn" href={proj.github} target="_blank" rel="noreferrer">
                     Ver Código
@@ -102,9 +106,9 @@ function Projects() {
         </div>
 
         <div className="page-right">
-          <img src={logoProjects} alt="Logo proyectos" 
-          className="logo-projects"
-     />
+          <img src={logoProjects} alt="Logo proyectos"
+            className="logo-projects"
+          />
         </div>
       </div>
     </section>
