@@ -109,8 +109,15 @@ html {
   }
   
   .certificado-btn {
-    background-color: #f5deb3;
-    color: #1a1a2e;
+    background: linear-gradient(
+            145deg,
+            #967d4b,
+            #f5deb3,
+            #fafaf8,
+            #f5deb3,
+            #967d4b
+          );
+    color: #2e241a!important;
     border: none;
     padding: 8px 20px;
     border-radius: 4px;
@@ -119,11 +126,12 @@ html {
   }
   
   .certificado-btn:hover {
-    background-color: #d4c19e;
+    background-color: #2e241a;
     transform: translateY(-2px);
+    color:  #f5deb3,;
   }
   .certificado-link {
-    color: #f5deb3;
+    color: #2e241a;
     padding: 10px;
     text-decoration: none;
     display: block;
@@ -132,7 +140,7 @@ html {
   
   .certificado-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #2e241a;
   }
   
 /* Añade estos estilos al CSS */
@@ -182,6 +190,7 @@ html {
       .certificado-btn {
         width: 100%;
         padding: 10px;
+       
       }
     
     .card-footer {

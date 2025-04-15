@@ -82,7 +82,7 @@ body {
 .hero-name {
     font-family: "Gwendolyn", cursive;
     font-size: 4rem;
-    color: #a6c7d9;
+    color: wheat;
 }
 
 /* Motivación */
@@ -111,7 +111,7 @@ body {
 }
 
 .hero-button {
-    background-color: #a6c7d9;
+    background-color: wheat;
     text-decoration: none;
     color: #120b13;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -123,9 +123,23 @@ body {
     font-weight: 500;
 }
 .hero-button:hover {
-    background-color: #f5deb3;
-    color: #120b13;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(
+        145deg,
+        #967d4b,
+        #f5deb3,
+        #fafaf8,
+        #f5deb3,
+        #967d4b
+      );
+      color: #4b3b2a; /* Un marrón suave para contraste */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: inset 0 1px 0 #fff,
+                  0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .footer-social-nav {

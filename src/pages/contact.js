@@ -49,17 +49,17 @@ function Contact() {
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name"></label><br/>
             <input type="text" id="name" name="name" placeholder="Nombre" required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Correo Electrónico</label>
+            <label htmlFor="email"></label><br/>
             <input type="email" id="email" name="email" placeholder="E-mail" required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Mensaje</label>
+            <label htmlFor="message"></label><br/>
             <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje"></textarea>
           </div>
 

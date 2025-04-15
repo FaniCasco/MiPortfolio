@@ -95,6 +95,9 @@
   .footer-tech svg:hover {
     color: #00aaff;
   }
+  .heart {
+    color: #f5deb3!important;
+  }
   
   /* Estilos responsivos para móviles, ocultar el menu de navegación */
   @media (max-width: 768px) {

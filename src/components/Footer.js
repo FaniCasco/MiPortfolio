@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import {
   SiHtml5,
@@ -29,10 +29,14 @@ function Footer() {
 
         {/* Segunda columna: Información */}
         <div className="footer-info">
-          <p>&copy; {new Date().getFullYear()} FANI MARIEL CASCO</p>
-          <p>💜 Desarrolladora Front End Jr. 💜</p>
-           {/*<p><FaMapMarkerAlt /> San Francisco (Córdoba), Argentina</p> */}
-        </div>
+  <p>&copy; {new Date().getFullYear()} FANI MARIEL CASCO</p>
+  <p>
+    <FaHeart style={{ color: '#f5deb3', marginRight: '5px' }} />
+    Desarrolladora Front End Jr.
+    <FaHeart style={{ color: '#f5deb3', marginLeft: '5px' }} />
+  </p>
+</div>
+
 
        
 

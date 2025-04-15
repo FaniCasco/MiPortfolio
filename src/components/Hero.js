@@ -1,5 +1,5 @@
 import React from "react";
-import logo2 from "../assets/images/logo-hero-1.png";
+import logo2 from "../assets/images/logo-simple.png";
 import cv from "../assets/documents/cv-FaniCasco-Abril-2025.pdf";
 
 function Hero() {

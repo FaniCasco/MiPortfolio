@@ -116,7 +116,7 @@
      ENCABEZADO DE LA SECCIÓN
   ============================= */
   .projects-header {
-    text-align: center;
+  
     margin-bottom: 3rem;
   }
   
@@ -127,7 +127,7 @@
   .section-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 2rem;
     gap: 1rem;
   }
@@ -137,11 +137,14 @@
   }
   
   .section-title {
-    font-size: 2.2rem;
-    color: #fefefe;
     font-weight: bold;
-    text-align: center;
-  }
+
+    font-family: "Karla", sans-serif;
+    color: #f5deb3;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+  
   /* =============================
      RESPONSIVE (MOBILE FRIENDLY)
   ============================= */
