@@ -1,10 +1,11 @@
 // components/ProjectCard.jsx
 import React from "react";
+import "../styles/projects.css";
 
 function ProjectCard({ title, description, image, techs, github, demo }) {
   return (
     <div className="project-card">
-      
+      <img src={image} alt={title}  className="project-image" />
       <h3>{title}</h3>
       <p>{description}</p>
       <p><strong>Tecnologías:</strong> {techs}</p>

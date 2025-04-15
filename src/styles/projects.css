@@ -1,15 +1,17 @@
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* dos columnas fijas */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-    justify-content: center; /* centra el grid */
+    justify-content: center;
     margin-top: 2rem;
     width: 100%;
-    max-width: 900px; /* opcional: límite para que no se estire demasiado */
+    max-width: 1100px;
+    /* más ancho total */
     margin-left: auto;
     margin-right: auto;
-  }
-  
+}
+
+
 .projects-section {
     flex-direction: column;
     padding: 4rem 5rem 6rem;
@@ -19,6 +21,7 @@
     text-align: center;
     margin-bottom: 3rem;
 }
+
 
 
 .project-card-glass {
@@ -31,6 +34,11 @@
     color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    /* opcional: evita que se hagan gigantes en pantallas grandes */
+    margin: 0 auto;
+    /* centrado dentro de cada columna */
 }
 
 .project-card-glass:hover {
@@ -50,6 +58,7 @@
     gap: 3rem;
     width: 100%;
     align-items: start;
+    
 }
 
 /* Columna izquierda (texto + tarjetas) */
@@ -59,6 +68,18 @@
 }
 
 
+.page-right img {
+    width: 100%;
+    max-width: 300px;
+    /* o lo que necesites */
+    height: auto;
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.text-projects {
+    width: 80%;
+}
 
 /* Responsive: 1 columna en pantallas chicas */
 @media (max-width: 768px) {
