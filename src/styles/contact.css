@@ -108,9 +108,9 @@
     margin-top: -20%;
 }
 
-.page-right img {
-    width: 300px; /* Tamaño ajustado
-    height: 300px; */
+.img-contacto {
+    width: 300px; 
+margin-top: -50%;
 }
 
 /* Spinner de carga */
@@ -157,6 +157,7 @@
     .form-group label {
         font-size: 0.7rem;
     }
+  
    
     
 }
