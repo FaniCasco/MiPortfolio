@@ -153,8 +153,8 @@ function Estudios() {
         </div>
       </div>
 
-      <div className="page-right">
-        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" />
+      <div className="page-right-formacion">
+        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" className= "img-estudios" />
       </div>
     </section>
   );

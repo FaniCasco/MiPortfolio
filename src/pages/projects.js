@@ -105,9 +105,9 @@ function Projects() {
           </div>
         </div>
 
-        <div className="page-right">
+        <div className="page-right-projects">
           <img src={logoProjects} alt="Logo proyectos"
-            className="logo-projects"
+            className="img-projects"
           />
         </div>
       </div>

@@ -123,6 +123,7 @@
     border-top-color: #fff;
     animation: spin 1s ease-in-out infinite;
   }
+
   
   @keyframes spin {
     to {
@@ -156,5 +157,6 @@
     .form-group label {
         font-size: 0.7rem;
     }
+   
     
 }

@@ -1,0 +1,14 @@
+.page-right-about{
+    margin: 0 auto;
+   
+}
+.img-about {
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  #logo-header {
+    margin-top: -3%;
+  }
+  
+}

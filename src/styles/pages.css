@@ -145,6 +145,9 @@
     #logo-header {
         display: block;
     }
+    .page-right-contacto #logo-header {
+        margin-top: 4%!important;
+    }
 }
 /* Breakpoint específico para pantallas muy pequeñas */
 @media (max-width: 468px) {

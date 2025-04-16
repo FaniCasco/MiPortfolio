@@ -144,6 +144,15 @@
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
+.page-right-projects{
+  margin: 0 auto;
+ 
+}
+.img-projects {
+width: 300px;
+}
+
   
   /* =============================
      RESPONSIVE (MOBILE FRIENDLY)
@@ -184,6 +193,7 @@
       display: block;
       width: 35px;
       height: auto;
+      margin-top: -4%;
     }
   
     .section-title {

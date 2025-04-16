@@ -15,8 +15,12 @@
     margin-top: 0; /* Elimina margen negativo */
     padding-bottom: 3rem; /* Espacio para el contenido */
 }
-.page-right img {
-    margin-top: 0;
+.page-right-formacion{
+    margin: 0 auto;
+   
+}
+.img-estudios {
+  width: 300px;
 }
 
 .page-title {
@@ -173,12 +177,16 @@ html {
   .dropdown-content a {
     pointer-events: auto;
   }
+
+ 
+  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
   }
   /* Ajustes responsive */
   @media (max-width: 768px) {
+ 
     .certificado-btn {
       padding: 6px 15px;
       font-size: 0.9rem;
@@ -235,6 +243,8 @@ html {
         justify-content: center;
         margin-top: 3rem;
     }
+
+   
 }
 
 @media (max-width: 480px) {

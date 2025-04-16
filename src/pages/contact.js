@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import "../styles/contact.css";
 import "../styles/pages.css";
+import "../styles/contact.css";
 import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
@@ -72,8 +72,8 @@ function Contact() {
 
       </div>
 
-      <div className="page-right">
-        <img src={logoContact} alt="Contact Logo" id="logo-bottom" />
+      <div className="page-right-contacto">
+        <img src={logoContact} alt="Contact Logo" id="logo-bottom" className= "img-contacto"  />
       </div>
     </section>
   );
