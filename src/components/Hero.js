@@ -5,7 +5,7 @@ import cv from "../assets/documents/cv-FaniCasco-Abril-2025.pdf";
 function Hero() {
     return (
         <section className="hero">
-            {/* Sección Izquierda: Saludo */}
+        
             <div className="hero-left">
                 <h1 className="hero-greeting">
                     ¡Hola! Soy <br />
@@ -17,8 +17,7 @@ function Hero() {
                     Descargar CV
                 </a>
             </div>
-
-            {/* Sección Derecha: Imagen */}
+     
             <div className="hero-right">
                 <img src={logo2} alt="Hero Img" />
             </div>

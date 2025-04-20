@@ -1,7 +1,5 @@
-// components/ProjectCard.jsx
 import React from "react";
 import "../styles/projects.css";
-
 function ProjectCard({ title, description, image, techs, github, demo }) {
   return (
     <div className="project-card">

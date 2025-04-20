@@ -11,6 +11,7 @@ import certificado7 from "../assets/certificados/desSoftware-argprog.pdf";
 import certificado8 from "../assets/certificados/nodejs.jpeg";
 import certificado9 from "../assets/certificados/Diploma_CAC-reactjs.pdf";
 import certificado10 from "../assets/certificados/coder.jpeg";
+
 const cursos = [
   {
     titulo: "BOOTCAMP FULLSTACK",
@@ -79,12 +80,9 @@ const cursos = [
     descripcion: "Aprendí a desarrollar sitios web usando HTML, CSS y JavaScript, creando diseños responsivos con Flexbox y Grid. Dominé Bootstrap para maquetar rápido, optimicé estilos con SASS y gestioné código con Git. Desarrollé proyectos reales como e-commerce, apliqué SEO básico y desplegué sitios funcionales, trabajando con metodologías ágiles.",
     icono: "bi bi-stack",
     certificado: certificado10
-  } 
+  }
 
-  
 ];
-
-
 function Estudios() {
   const handleVerCertificado = (certificadoUrl) => {
     window.open(certificadoUrl, '_blank');
@@ -96,7 +94,7 @@ function Estudios() {
         <div className="page-left-header">
           <img src={logoEstudios} alt="Estudios Logo" id="logo-header" />
           <h1 className="page-title">Formación Académica</h1>
-        
+
         </div>
 
         <div className="education-container">
@@ -154,7 +152,7 @@ function Estudios() {
       </div>
 
       <div className="page-right-formacion">
-        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" className= "img-estudios" />
+        <img src={logoEstudios} alt="Estudios Logo" id="logo-bottom" className="img-estudios" />
       </div>
     </section>
   );

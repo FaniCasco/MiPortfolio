@@ -8,10 +8,9 @@
     box-sizing: border-box;
 }
 
-
 /* Definir base escalable */
 html {
-    font-size: 16px; /* Base consistente */
+    font-size: 16px;
 }
 
 body {
@@ -19,37 +18,37 @@ body {
 }
 
 /* Estilos generales */
-.bg-nav, .bg-footer {
+.bg-nav,
+.bg-footer {
     background-color: #070707;
 }
- /*links de la nav*/
 
- .navbar-nav .nav-item .nav-link{
+/*links de la nav*/
+.navbar-nav .nav-item .nav-link {
     color: white;
     font-size: large;
     gap: 5px;
-    font-family:'Karla', sans-serif;
+    font-family: 'Karla', sans-serif;
     margin-right: 2rem;
-  
- }
+}
 
- .navbar-nav .nav-item .nav-link::after{
+.navbar-nav .nav-item .nav-link::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
     background: linear-gradient(90deg, #557ef0, #f5deb3);
     transition: width .3s;
-  }
+}
 
-  .navbar-nav .nav-item .nav-link:hover::after{
+.navbar-nav .nav-item .nav-link:hover::after {
     width: 100%;
- }
+}
 
 /* Sección Hero */
 .hero {
     width: 100%;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);    
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -57,7 +56,6 @@ body {
     padding: auto;
     margin: -5rem 0 auto;
 }
-
 
 /* Contenedor izquierdo (Texto) */
 .hero-left {
@@ -100,7 +98,6 @@ body {
     justify-content: center;
     align-items: center;
     padding-right: 5rem;
-   
 }
 
 .hero-right img {
@@ -122,46 +119,40 @@ body {
     font-family: "karla", sans-serif;
     font-weight: 500;
 }
+
 .hero-button:hover {
-    background: linear-gradient(
-        145deg,
-        #967d4b,
-        #f5deb3,
-        #fafaf8,
-        #f5deb3,
-        #967d4b
-      );
-      color: #4b3b2a; /* Un marrón suave para contraste */
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: inset 0 1px 0 #fff,
-                  0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(145deg,
+            #967d4b,
+            #f5deb3,
+            #fafaf8,
+            #f5deb3,
+            #967d4b);
+    color: #4b3b2a;
+    /* Un marrón suave para contraste */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 #fff,
+        0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .footer-social-nav {
-  
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex: 1; /* Distribuye espacio equitativamente */
-     gap: 20px;
+    flex: 1;
+    gap: 20px;
+}
 
-
-  }
-
-  .footer-social-nav a {
-
+.footer-social-nav a {
     color: white;
     font-size: 1.5rem;
     transition: 0.3s;
-  }
-
-
+}
 
 /* Animación */
 @keyframes fadeIn {
@@ -169,6 +160,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -179,28 +171,29 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* RESPONSIVE */
-
 
 /* Responsividad */
 @media (max-width: 768px) {
     .navbar-brand {
         margin-left: 50px;
     }
+
     .hero {
         flex-direction: column;
         text-align: center;
         height: auto;
     }
+
     .hero span {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
 
-    .hero-left, .hero-right {
+    .hero-left,
+    .hero-right {
         width: 100%;
         padding: 2rem;
     }
@@ -209,7 +202,7 @@ body {
         margin-top: 4rem;
         align-items: center;
         justify-content: center;
-        
+
     }
 
     .hero-greeting {
@@ -217,9 +210,10 @@ body {
     }
 
     .hero-name {
-      
+
         font-size: 4rem;
     }
+
     .hero-right img {
         margin: 0 0 8rem 0;
         display: flex;
@@ -228,8 +222,3 @@ body {
         align-items: center;
     }
 }
-
-
-
-
-

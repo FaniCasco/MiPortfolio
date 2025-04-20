@@ -6,7 +6,6 @@ import videoCafe from "../assets/videos/cafe-coco.mp4";
 import videoInmobiliaria from "../assets/videos/demo-gestorInmobiliario.mp4";
 import videoBilletera from "../assets/videos/paypy.mp4";
 
-
 function Projects() {
   const projects = [
     {
@@ -65,7 +64,7 @@ function Projects() {
       github: "https://github.com/FaniCasco/PROYECTO-FINAL-CODER",
       demo: "https://househerramientas.vercel.app/",
     }
-    // podés agregar más si querés
+
   ];
 
   return (

@@ -2,201 +2,204 @@
    CONTENEDOR PRINCIPAL
 ============================= */
 .projects-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    width: 100%;
-    align-items: start;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-  
-  /* =============================
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  width: 100%;
+  align-items: start;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* =============================
      CONTENIDO IZQUIERDO
   ============================= */
-  .projects-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .text-projects {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 2rem;
-  }
-  
-  /* =============================
+.projects-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-projects {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* =============================
      GRILLA DE CARDS
   ============================= */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  /* =============================
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* =============================
      CARD INDIVIDUAL
   ============================= */
-  .project-card-glass {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 16px;
-    padding: 2rem;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .project-card-glass:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-institution {
-    font-weight: bold;
-    color: #ccc;
-    font-size: 0.9rem;
-  }
-  
-  .card-description {
-    margin: 1rem 0;
-  }
-  
-  .card-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .certificado-btn {
-    background-color: #ffffff10;
-    border: 1px solid #ffffff20;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .certificado-btn:hover {
-    background-color: #ffffff30;
-  }
-  
-  /* =============================
+.project-card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.project-card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-institution {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.card-description {
+  margin: 1rem 0;
+}
+
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.certificado-btn {
+  background-color: #ffffff10;
+  border: 1px solid #ffffff20;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.certificado-btn:hover {
+  background-color: #ffffff30;
+}
+
+/* =============================
      COLUMNA DERECHA (IMAGEN)
   ============================= */
-  .page-right {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .page-right img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-  /* =============================
+.page-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-right img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* =============================
      ENCABEZADO DE LA SECCIÓN
   ============================= */
-  .projects-header {
-  
-    margin-bottom: 3rem;
-  }
-  
-  .page-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 2rem;
-    gap: 1rem;
-  }
-  
-  .section-logo {
-    display: none; /* Ocultamos el logo en pantallas grandes */
-  }
-  
-  .section-title {
-    font-weight: bold;
+.projects-header {
 
-    font-family: "Karla", sans-serif;
-    color: #f5deb3;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
-.page-right-projects{
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.section-logo {
+  display: none;
+  /* Ocultamos el logo en pantallas grandes */
+}
+
+.section-title {
+  font-weight: bold;
+
+  font-family: "Karla", sans-serif;
+  color: #f5deb3;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page-right-projects {
   margin: 0 auto;
- 
-}
-.img-projects {
-width: 300px;
 }
 
-  
-  /* =============================
+.img-projects {
+  width: 300px;
+}
+
+
+/* =============================
      RESPONSIVE (MOBILE FRIENDLY)
   ============================= */
-  @media (max-width: 1024px) {
-    .projects-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .page-right {
-      margin-top: 2rem;
-      text-align: center;
-    }
-  
-    .page-right img {
-        display: flex;
-        justify-content: center;
-      margin: 0 auto;
-    }
-  
-    .text-projects {
-      max-width: 100%;
-    }
-  
-    .projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+@media (max-width: 1024px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
-  /* En pantallas chicas (responsive) mostramos logo + título en fila */
+
+  .page-right {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .page-right img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .text-projects {
+    max-width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* En pantallas chicas (responsive) mostramos logo + título en fila */
 @media (max-width: 768px) {
-    .section-header {
-      justify-content: flex-start;
-      text-align: left;
-      padding-left: 1rem;
-    }
-  
-    .section-logo {
-      display: block;
-      width: 35px;
-      height: auto;
-      margin-top: -4%;
-    }
-  
-    .section-title {
-      font-size: 1.5rem;
-    }
+  .section-header {
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 1rem;
   }
+
+  .section-logo {
+    display: block;
+    width: 35px;
+    height: auto;
+    margin-top: -4%;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

@@ -2,11 +2,10 @@ import React from "react";
 import "../styles/pages.css";
 import "../styles/about.css";
 import logoAbout from "../assets/images/logo-about.png";
-
 function About() {
   return (
     <section className="page">
-      {/* Sección Izquierda */}
+ 
       <div className="page-left">
         <div className="page-left-header">
           <img src={logoAbout} alt="About Logo" id="logo-header" />
@@ -24,7 +23,6 @@ function About() {
         </p>
       </div>
 
-      {/* Sección Derecha */}
       <div className="page-right-about">
         <img src={logoAbout} alt="About Logo" id="logo-bottom" className= "img-about"/>
       </div>

@@ -3,11 +3,9 @@ import emailjs from "@emailjs/browser";
 import "../styles/pages.css";
 import "../styles/contact.css";
 import logoContact from "../assets/images/logo-contact.png";
-
 function Contact() {
   const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -49,17 +47,17 @@ function Contact() {
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name"></label><br/>
+            <label htmlFor="name"></label><br />
             <input type="text" id="name" name="name" placeholder="Nombre" required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email"></label><br/>
+            <label htmlFor="email"></label><br />
             <input type="email" id="email" name="email" placeholder="E-mail" required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="message"></label><br/>
+            <label htmlFor="message"></label><br />
             <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje"></textarea>
           </div>
 
@@ -73,7 +71,7 @@ function Contact() {
       </div>
 
       <div className="page-right-contacto">
-        <img src={logoContact} alt="Contact Logo" id="logo-bottom" className= "img-contacto"  />
+        <img src={logoContact} alt="Contact Logo" id="logo-bottom" className="img-contacto" />
       </div>
     </section>
   );
