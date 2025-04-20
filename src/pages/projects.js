@@ -4,6 +4,7 @@ import "../styles/pages.css";
 import "../styles/projects.css";
 import videoCafe from "../assets/videos/cafe-coco.mp4";
 import videoInmobiliaria from "../assets/videos/demo-gestorInmobiliario.mp4";
+import videoBilletera from "../assets/videos/paypy.mp4";
 
 
 function Projects() {
@@ -41,7 +42,7 @@ function Projects() {
       description: "Billetera virtual hecha en equipo con Python y Tkinter para la interfaz. Con registro de usuario y contraseña, se puede gestionar entradas de dinero, carga de servicios, pagos y consulta de movimientos.",
       techs: "PYTHON, TKINTER",
       github: "https://github.com/FaniCasco/PAYPY",
-      demo: "#",
+      demo: videoBilletera,
     },
     {
       title: "PLATAFORMA STREAM REACTv",
