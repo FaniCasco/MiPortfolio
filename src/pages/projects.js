@@ -27,7 +27,7 @@ function Projects() {
       description: "Este es un sistema que gestiona toda la administración de un hotel: empleados, reservas, habitaciones, cobros y huéspedes.",
       techs: "React, Node.js, Bootstrap, SweetAlert",
       github: "https://github.com/FaniCasco/Sistema-de-gestion-Hotelera",
-      demo: "https://sistema-de-gestion-hotelera-one.vercel.app/",
+      demo: "https://sistema-hotel.vercel.app/",
     },
     {
       title: "E-COMMERCE DE VENTA DE COMIDA RÁPIDA",
