@@ -18,7 +18,7 @@ const cursos = [
     titulo: "ENGLISH PRE-INTERMEDIATE 1 COURSE",
     institucion: "CIUDAD BILINGÜE - ENGLISH DISCOVERIES",
     fecha: "MAYO 2025",
-    descripcion: "Completé nivel 2 del trayecto de aprendizaje de Iglés para el trabajo logrando llegar a nivel A2",
+    descripcion: "Completé Nivel 2 del trayecto de aprendizaje de Inglés para el trabajo logrando llegar a nivel A2. Actualmente continúo con el nivel Pre-intermedite 2",
     icono: "bi bi-stack",
     certificado: certificado11
   },
