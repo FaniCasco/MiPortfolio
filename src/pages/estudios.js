@@ -11,8 +11,17 @@ import certificado7 from "../assets/certificados/desSoftware-argprog.pdf";
 import certificado8 from "../assets/certificados/nodejs.jpeg";
 import certificado9 from "../assets/certificados/Diploma_CAC-reactjs.pdf";
 import certificado10 from "../assets/certificados/coder.jpeg";
+import certificado11 from "../assets/certificados/certificado-ingles-2.pdf";
 
 const cursos = [
+    {
+    titulo: "ENGLISH PRE-INTERMEDIATE 1 COURSE",
+    institucion: "CIUDAD BILINGÜE - ENGLISH DISCOVERIES",
+    fecha: "MAYO 2025",
+    descripcion: "Completé nivel 2 del trayecto de aprendizaje de Iglés para el trabajo logrando llegar a nivel A2",
+    icono: "bi bi-stack",
+    certificado: certificado11
+  },
   {
     titulo: "BOOTCAMP FULLSTACK",
     institucion: "CILSA",
