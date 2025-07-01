@@ -15,6 +15,14 @@ import certificado11 from "../assets/certificados/certificado-ingles-2.pdf";
 
 const cursos = [
     {
+    titulo: "ACCESIBILIDAD Y UX",
+    institucion: "CILSA",
+    fecha: "Abril a Julio 2025",
+    descripcion: "Aprendí a crear sitios, apps o productos que puedan usar personas con discapacidades (visuales, motoras, cognitivas, etc.), pensando en la inclusión desde el inicio. Comprendí cuáles son las bases de una buena experiencia de usuario: usabilidad, navegación clara, diseño intuitivo, interacción fluida, etc.",
+    icono: "bi bi-stack",
+     
+  },
+    {
     titulo: "ENGLISH PRE-INTERMEDIATE 1 COURSE",
     institucion: "CIUDAD BILINGÜE - ENGLISH DISCOVERIES",
     fecha: "MAYO 2025",
