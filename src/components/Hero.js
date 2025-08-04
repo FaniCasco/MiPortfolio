@@ -1,6 +1,6 @@
 import React from "react";
 import logo2 from "../assets/images/logo-simple.png";
-import cv from "../assets/documents/cv-FaniCasco-Julio25.pdf";
+import cv from "../assets/documents/cv-FaniCasco-Agosto25.pdf";
 
 function Hero() {
     return (
