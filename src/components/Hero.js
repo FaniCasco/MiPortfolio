@@ -11,8 +11,9 @@ function Hero() {
                     ¡Hola! Soy <br />
                     <span className="hero-name">Fany</span>
                 </h1>
-                <p className="hero-motivation">Soy una profesional apasionada por la tecnología,
-                    con formación especializada en desarrollo Front-End. <br /> Mi principal enfoque es crear soluciones digitales que permitan a los clientes optimizar y mejorar su flujo de trabajo.</p>
+                <p className="hero-motivation">Desarrolladora Front-End con foco en React y JavaScript.
+                    Formo parte del equipo de Estudio Rocha & Asociados (Programa +26). <br />
+                    Creo interfaces claras, funcionales y con intención — combinando lógica y creatividad.</p>
                 <a href={cv} download="FaniCasco-CV.pdf" className="hero-button">
                     Descargar CV
                 </a>

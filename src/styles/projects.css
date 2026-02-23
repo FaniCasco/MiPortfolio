@@ -41,12 +41,12 @@
      CARD INDIVIDUAL
   ============================= */
 .project-card-glass {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 2rem;
-  color: #fff;
+  color: #f8fafc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -66,7 +66,7 @@
 
 .card-institution {
   font-weight: bold;
-  color: #ccc;
+  color: #94a3b8;
   font-size: 0.9rem;
 }
 
@@ -140,9 +140,8 @@
 
 .section-title {
   font-weight: bold;
-
   font-family: "Karla", sans-serif;
-  color: #f5deb3;
+  color: #d4af37;
   font-size: 2rem;
   margin-bottom: 1rem;
 }

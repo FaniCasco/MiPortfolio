@@ -1,5 +1,5 @@
 .footer {
-  background-color: #0d0d0d;
+  background-color: #0f172a;
   color: white;
   text-align: center;
   padding: 20px;
@@ -46,7 +46,7 @@
 }
 
 .footer-menu a:hover {
-  color: #00aaff;
+  color: #d4af37;
 }
 
 .footer-info {
@@ -75,7 +75,7 @@
 }
 
 .footer-social a:hover {
-  color: #00aaff;
+  color: #d4af37;
 }
 
 .footer-tech {
@@ -92,11 +92,11 @@
 }
 
 .footer-tech svg:hover {
-  color: #00aaff;
+  color: #d4af37;
 }
 
 .heart {
-  color: #f5deb3 !important;
+  color: #d4af37 !important;
 }
 
 /* Estilos responsivos para móviles */

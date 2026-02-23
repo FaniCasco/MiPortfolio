@@ -1,6 +1,6 @@
 .page-contact {
     width: 100%;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     height: 110vh; /* Reducido el alto total */
     display: flex;
     align-items: center;
@@ -10,12 +10,12 @@
 .mje-success {
     font-family: "Karla", sans-serif;
     font-size: 2rem;
-    color: #f5deb3;
+    color: #d4af37;
 }
 
 .page-left-contact {
     width: 50%;
-    color: wheat;
+    color: #94a3b8;
     text-align: left;
     margin-top: -10rem;
 }
@@ -23,7 +23,7 @@
 .page-title-contact {
     font-family: "Karla", sans-serif;
     font-size: 3rem;
-    color: #f5deb3;
+    color: #d4af37;
 }
 
 /* Formulario más pequeño */
@@ -52,7 +52,7 @@
 
 .form-group label {
     font-size: 0.8rem;
-    color: wheat;
+    color: #94a3b8;
     margin-bottom: -8px;
 }
 
@@ -60,9 +60,9 @@
 .form-group textarea {
     padding: 0.3rem;
     font-size: 0.9rem;
-    border: 2px solid wheat;
+    border: 2px solid rgba(212, 175, 55, 0.4);
     border-radius: 10px;
-    background-color: #1a1a2e;
+    background-color: #0f172a;
     color: white;
     outline: none;
 }
@@ -94,7 +94,7 @@
     font-weight: 500;
 }
 
-.form-button:hover{
+.form-button:hover {
     background-color: #120b13;
     color: wheat;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);

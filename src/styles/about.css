@@ -1,9 +1,45 @@
-.page-right-about{
-    margin: 0 auto;
-   
+.page-right-about {
+  margin: 0 auto;
 }
+
 .img-about {
   width: 300px;
+}
+
+.about-link {
+  color: #d4af37;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.about-link:hover {
+  color: #c9a962;
+  border-color: #c9a962;
+}
+
+.about-highlight {
+  color: #d4af37;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(245, 222, 179, 0.15);
+  color: #f5deb3;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  border: 1px solid rgba(245, 222, 179, 0.3);
+  transition: all 0.3s ease;
+}
+
+.about-cta:hover {
+  background: rgba(245, 222, 179, 0.25);
+  border-color: #f5deb3;
+  color: wheat;
 }
 
 @media screen and (max-width: 768px) {

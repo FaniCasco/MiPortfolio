@@ -19,6 +19,7 @@ function Navbar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item"><a className="nav-link" href="/"> <FaHome /> </a></li>
             <li className="nav-item"><a className="nav-link" href="/about">Sobre mí</a></li>
+            <li className="nav-item"><a className="nav-link" href="/experiencia">Experiencia</a></li>
             <li className="nav-item"><a className="nav-link" href="/estudios">Formación</a></li>
             <li className="nav-item"><a className="nav-link" href="/projects">Proyectos</a></li>
             <li className="nav-item"><a className="nav-link" href="/contact">Contacto</a></li>

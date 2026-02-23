@@ -1,7 +1,7 @@
 /* Estilos generales para ambas secciones */
 .page {
     width: 100%;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     min-height: 100vh;
     height: auto; /* Añade esto */
     display: flex;
@@ -26,7 +26,7 @@
 .page-title {
     font-family: "Karla", sans-serif;
     font-size: 3rem;
-    color: #f5deb3;
+    color: #d4af37;
     
 
 }
@@ -48,19 +48,19 @@
 
 .card-title {
     font-size: 1.8rem;
-    color: #f5deb3;
+    color: #d4af37;
     margin-bottom: 0.3rem;
 }
 
 .card-institution {
     display: block;
     font-size: 1.1rem;
-    color: #8892b0;
+    color: #94a3b8;
     margin-bottom: 0.8rem;
 }
 
 .card-description {
-    color: #ccd6f6;
+    color: #94a3b8;
     line-height: 1.6;
     margin: 1rem 0;
     font-size: 1rem;
@@ -76,7 +76,7 @@
 .card-date {
     margin-top: 0; /* Elimina margen negativo */
     float: none; /* Elimina float */
-    color: #d4c19e;
+    color: #c9a962;
 }
 
 /* Eliminar iconos */
@@ -95,7 +95,7 @@
 }
 
 .navigation-footer a {
-    color: #f5deb3;
+    color: #d4af37;
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -132,10 +132,10 @@ html {
   .certificado-btn:hover {
     background-color: #2e241a;
     transform: translateY(-2px);
-    color:  #f5deb3,;
+    color: #f5deb3 !important;
   }
   .certificado-link {
-    color: #2e241a;
+    color: #f8fafc;
     padding: 10px;
     text-decoration: none;
     display: block;
@@ -143,8 +143,8 @@ html {
   }
   
   .certificado-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #2e241a;
+    background-color: rgba(212, 175, 55, 0.2);
+    color: #d4af37;
   }
   
 /* Añade estos estilos al CSS */
@@ -159,7 +159,7 @@ html {
     position: absolute;
     top: 100%; /* Posiciona el dropdown debajo del botón */
     left: 0;
-    background: #1a1a2e;
+    background: #0f172a;
     min-width: 200px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     border-radius: 4px;
