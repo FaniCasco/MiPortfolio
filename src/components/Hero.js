@@ -12,7 +12,7 @@ function Hero() {
                     <span className="hero-name">Fany</span>
                 </h1>
                 <p className="hero-motivation">Desarrolladora Front-End con foco en React y JavaScript.
-                    Formo parte del equipo de Estudio Rocha & Asociados (Programa +26). <br />
+                    Formé parte del equipo de Estudio Rocha & Asociados (Programa +26). <br />
                     Creo interfaces claras, funcionales y con intención — combinando lógica y creatividad.</p>
                 <a href={cv} download="FaniCasco-CV.pdf" className="hero-button">
                     Descargar CV
