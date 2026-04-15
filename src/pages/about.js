@@ -13,13 +13,12 @@ function About() {
           <h1 className="page-title">Sobre Mí</h1>
         </div>
         <p className="page-text">
-          Soy Desarrolladora Front-End con foco en React y JavaScript. Actualmente
-          formo parte del equipo de desarrollo en{" "}
+          Soy Desarrolladora Front-End con foco en React y JavaScript. Formé parte del equipo de desarrollo en{" "}
           <Link to="/experiencia" className="about-link">
             Estudio Rocha & Asociados
           </Link>{" "}
-          (Programa +26 del Gobierno de Córdoba), donde participo en la creación,
-          mejora y mantenimiento de interfaces web.
+          (Programa +26 del Gobierno de Córdoba), donde participé en la creación,
+          mejora y mantenimiento de interfaces web, además de gestionar contenidos de sitios de wordpress.
         </p>
         <p className="page-text">
           Me apasiona crear soluciones digitales que simplifiquen procesos y aporten valor real.
