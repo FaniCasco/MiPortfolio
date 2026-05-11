@@ -5,20 +5,40 @@ import cv from "../assets/documents/cv-FaniCasco-mayo2026-.pdf";
 function Hero() {
     return (
         <section className="hero">
-        
+
             <div className="hero-left">
                 <h1 className="hero-greeting">
                     ¡Hola! Soy <br />
-                    <span className="hero-name">Fany</span>
+                    <span className="hero-name">Fani Casco</span>
                 </h1>
-                <p className="hero-motivation">Desarrolladora Front-End con foco en React y JavaScript.
-                    Formé parte del equipo de Estudio Rocha & Asociados (Programa +26). <br />
-                    Creo interfaces claras, funcionales y con intención — combinando lógica y creatividad.</p>
-                <a href={cv} download="FaniCasco-CV.pdf" className="hero-button">
-                    Descargar CV
-                </a>
+                <p className="hero-motivation">
+                    Product Designer Jr y Desarrolladora Front-End con foco en UX/UI, React.Js, Vue.Js y quasar.
+                    <br />
+                    Diseño y desarrollo interfaces claras, funcionales y centradas en la experiencia de usuario.
+                </p>
+                <p className="hero-stack">
+                    UX/UI •  Figma •  React • Vue.Js •  Quasar •  Responsive Design
+                </p>
+
+                <div className="hero-buttons">
+                    <a
+                        href={cv}
+                        download="cv-FaniCasco-mayo2026-.pdf"
+                        className="hero-button"
+                    >
+                        CV FRONT-END Dev
+                    </a>
+
+                    <a
+                        href={cv}
+                        download="cv-FaniCasco-UxUiDesigner.pdf"
+                        className="hero-button"
+                    >
+                        CV UX/UI Designer
+                    </a>
+                </div>
             </div>
-     
+
             <div className="hero-right">
                 <img src={logo2} alt="Hero Img" />
             </div>

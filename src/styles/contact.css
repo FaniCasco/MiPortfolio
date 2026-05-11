@@ -1,163 +1,334 @@
+/* =============================
+   PAGE CONTACT
+============================= */
+
 .page-contact {
-    width: 100%;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    height: 110vh; /* Reducido el alto total */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5rem;
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+
+  align-items: center;
+
+  padding: 4rem 5rem;
+
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
-.mje-success {
-    font-family: "Karla", sans-serif;
-    font-size: 2rem;
-    color: #d4af37;
-}
+
+/* =============================
+   LEFT
+============================= */
 
 .page-left-contact {
-    width: 50%;
-    color: #94a3b8;
-    text-align: left;
-    margin-top: -10rem;
+  width: 100%;
+  max-width: 700px;
 }
+
+/* =============================
+   TITLE
+============================= */
 
 .page-title-contact {
-    font-family: "Karla", sans-serif;
-    font-size: 3rem;
-    color: #d4af37;
+  font-family: "Karla", sans-serif;
+  font-size: 3rem;
+  color: #d4af37;
 }
 
-/* Formulario más pequeño */
-.contact-form {
-    margin: 0 0 4rem 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: linear-gradient(
-        145deg,
-        #967d4b,
-        #f5deb3,
-        #fafaf8,
-        #f5deb3,
-        #967d4b
-      );
-    padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 -3px 5px rgba(255, 255, 255, 3.2);
+/* =============================
+   SUCCESS MESSAGE
+============================= */
+
+.mje-success {
+  font-family: "Karla", sans-serif;
+  font-size: 2rem;
+  color: #d4af37;
+  text-align: center;
 }
+
+/* =============================
+   FORM
+============================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  width: 100%;
+
+  margin-top: 2rem;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* =============================
+   FORM GROUP
+============================= */
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-group label {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    margin-bottom: -8px;
-}
+/* =============================
+   INPUTS
+============================= */
 
 .form-group input,
 .form-group textarea {
-    padding: 0.3rem;
-    font-size: 0.9rem;
-    border: 2px solid rgba(212, 175, 55, 0.4);
-    border-radius: 10px;
-    background-color: #0f172a;
-    color: white;
-    outline: none;
+  width: 100%;
+
+  padding: 1rem;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(212, 175, 55, 0.2);
+
+  background: rgba(15, 23, 42, 0.8);
+
+  color: #f8fafc;
+
+  font-size: 1rem;
+
+  font-family: "Karla", sans-serif;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.2s ease,
+    background 0.3s ease;
 }
 
-/* Reducir tamaño del textarea */
+/* =============================
+   PLACEHOLDER
+============================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* =============================
+   FOCUS
+============================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+
+  background: rgba(15, 23, 42, 1);
+
+  transform: translateY(-1px);
+}
+
+/* =============================
+   TEXTAREA
+============================= */
+
 .form-group textarea {
-    resize: none;
-    height: 60px; /* Más compacto */
+  min-height: 140px;
+  resize: vertical;
 }
 
-/* Botón centrado y con margen */
+/* =============================
+   BUTTON
+============================= */
+
 .form-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.3rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .form-button {
-    text-decoration: none;
-    background-color: #a6c7d9;
-    text-decoration: none;
-    color: #120b13;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    padding: 5px 20px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-    font-family: "karla", sans-serif;
-    font-weight: 500;
+  border: none;
+
+  padding: 0.9rem 1.8rem;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #0f172a;
+
+  background: linear-gradient(135deg, #d4af37, #f5deb3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .form-button:hover {
-    background-color: #120b13;
-    color: wheat;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
-.page-right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -20%;
+.form-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =============================
+   RIGHT IMAGE
+============================= */
+
+.page-right-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-contacto {
-    width: 300px; 
-margin-top: -50%;
+  width: 320px;
+  max-width: 100%;
 }
 
-/* Spinner de carga */
+/* =============================
+   SPINNER
+============================= */
+
 .spinner {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+
+  width: 1rem;
+  height: 1rem;
+
+  border: 3px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 50%;
+
+  border-top-color: #fff;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (max-width: 1024px) {
+  .page-contact {
+    grid-template-columns: 1fr;
+
+    padding: 3rem 2rem;
+
+    gap: 2rem;
   }
 
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+  .page-right-contacto {
+    order: -1;
   }
 
-@media screen and (max-width: 768px) {
-    .page-contact {
-        flex-direction: column;
-        height: 100vh;
-        padding: 0 1rem;
-    }
+  .img-contacto {
+    width: 220px;
+  }
+}
 
-    .page-left-contact {
-        width: 100%;
-        text-align: center;
-        margin-top: 0;
-    }
+/* MOBILE */
 
-    .page-title-contact {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
+@media (max-width: 768px) {
+  .page-contact {
+    padding: 2rem 1.2rem 4rem;
+  }
 
-    .contact-form {
-        width: 100%;
-        padding: 1rem;
-    }
+  .page-title-contact {
+    font-size: 2.2rem;
+  }
 
-    .form-group label {
-        font-size: 0.7rem;
-    }
-  
-   
-    
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+
+  .img-contacto {
+    width: 180px;
+  }
+}
+/* =============================
+   MENSAJE DE ÉXITO
+============================= */
+
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.success-logo {
+  width: 90px;
+  margin-bottom: 1.5rem;
+}
+
+.success-title {
+  font-size: 2.2rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-family: "Karla", sans-serif;
+}
+
+.success-text {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.success-text-secondary {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .success-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .success-title {
+    font-size: 1.8rem;
+  }
 }

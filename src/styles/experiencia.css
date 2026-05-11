@@ -1,77 +1,106 @@
 /* =============================
    PÁGINA EXPERIENCIA LABORAL
 ============================= */
+
 .page-experiencia {
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: start;
   padding: 4rem 5rem 6rem;
 }
 
 .experiencia-left {
-  width: 50%;
-  max-width: 900px;
+  width: 100%;
 }
 
 .page-right-experiencia {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .img-experiencia {
-  width: 300px;
+  width: 250px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* =============================
    CARD PRINCIPAL DE EXPERIENCIA
 ============================= */
+
 .experience-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 16px;
   padding: 2rem;
-  margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .experience-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .experience-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+
+  border-bottom:
+    1px solid rgba(212, 175, 55, 0.25);
 }
 
 .badge-programa {
   display: inline-block;
-  background: linear-gradient(135deg, #d4af37, #c9a962);
+
+  background:
+    linear-gradient(135deg, #d4af37, #c9a962);
+
   color: #0f172a;
+
   padding: 0.35rem 0.9rem;
+
   border-radius: 20px;
+
   font-size: 0.9rem;
   font-weight: 600;
+
   letter-spacing: 0.5px;
+
   margin-bottom: 1rem;
 }
 
 .experience-empresa {
   font-family: "Karla", sans-serif;
+
   font-size: 1.8rem;
+
   color: #d4af37;
+
   margin: 0 0 0.25rem 0;
 }
 
 .experience-programa {
   font-size: 1rem;
   color: #94a3b8;
+
   margin: 0 0 0.5rem 0;
 }
 
 .experience-rol {
   font-size: 1.1rem;
   color: #f8fafc;
+
   font-weight: 500;
+
   margin: 0 0 1rem 0;
 }
 
@@ -83,9 +112,13 @@
 
 .tech-tag {
   background: rgba(212, 175, 55, 0.15);
+
   color: #d4af37;
+
   padding: 0.35rem 0.75rem;
+
   border-radius: 8px;
+
   font-size: 0.85rem;
 }
 
@@ -97,29 +130,39 @@
 
 .experience-parrafo {
   font-family: "Karla", sans-serif;
+
   font-size: 1rem;
+
   color: #94a3b8;
+
   line-height: 1.7;
+
   margin: 0;
 }
 
 /* =============================
-   SECCIÓN "LO QUE APORTO"
+   APORTES DERECHA
 ============================= */
-.aportes-section {
-  margin-top: 3rem;
+
+.right-aportes {
+  width: 100%;
 }
 
 .aportes-title {
   font-family: "Karla", sans-serif;
-  font-size: 1.5rem;
+
+  font-size: 1.4rem;
+
   color: #d4af37;
-  margin-bottom: 1.5rem;
+
+  margin-bottom: 1.2rem;
+
+  text-align: center;
 }
 
-.aportes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+.right-grid {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -127,55 +170,76 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
   border-radius: 12px;
-  padding: 1.25rem;
+
+  padding: 1rem;
+
   transition: all 0.3s ease;
 }
 
 .aporte-card:hover {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(212, 175, 55, 0.3);
+
+  border-color:
+    rgba(212, 175, 55, 0.3);
 }
 
 .aporte-icono {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   flex-shrink: 0;
 }
 
 .aporte-titulo {
   font-size: 1rem;
+
   color: #d4af37;
+
   margin: 0 0 0.25rem 0;
+
   font-weight: 600;
 }
 
 .aporte-detalle {
   font-size: 0.9rem;
+
   color: #94a3b8;
+
   margin: 0;
+
   line-height: 1.4;
 }
 
 /* =============================
    RESPONSIVE
 ============================= */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+
   .page-experiencia {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 2rem 1.5rem 4rem;
   }
 
-  .experiencia-left,
   .page-right-experiencia {
-    width: 100%;
+    order: -1;
   }
 
-  .page-right-experiencia,
-  #logo-bottom {
-    display: none;
+  .img-experiencia {
+    width: 220px;
   }
+
+  .right-grid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
 
   .experience-card {
     padding: 1.5rem;
@@ -185,17 +249,22 @@
     font-size: 1.5rem;
   }
 
-  .aportes-grid {
-    grid-template-columns: 1fr;
+  .aporte-card {
+    padding: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
+
   .tech-tags {
     flex-wrap: wrap;
   }
 
   .tech-tag {
     font-size: 0.8rem;
+  }
+
+  .experience-parrafo {
+    font-size: 0.95rem;
   }
 }

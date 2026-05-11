@@ -108,7 +108,10 @@ body {
     height: auto;
     margin: -5rem -10rem 0 0;
 }
-
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
 .hero-button {
     background-color: wheat;
     text-decoration: none;
@@ -118,6 +121,7 @@ body {
     border-radius: 25px;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    margin-right: 1rem;
     font-family: "karla", sans-serif;
     font-weight: 500;
 }

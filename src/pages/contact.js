@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+
 import emailjs from "@emailjs/browser";
+
 import { EMAILJS } from "../config/constants";
+
 import "../styles/pages.css";
 import "../styles/contact.css";
+
 import logoContact from "../assets/images/logo-contact.png";
 
 function Contact() {
+
   const [loading, setLoading] = useState(false);
+
   const [messageSent, setMessageSent] = useState(false);
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
+
     setLoading(true);
 
     emailjs
@@ -20,37 +28,118 @@ function Contact() {
         e.target,
         EMAILJS.PUBLIC_KEY
       )
-      .then(
-        () => {
-          setMessageSent(true);
-          setLoading(false);
-        },
-        (error) => {
-          console.error("Error al enviar mensaje:", error.text);
-          setLoading(false);
-        }
-      );
+
+      .then((response) => {
+
+        console.log(
+          "SUCCESS!",
+          response.status,
+          response.text
+        );
+
+        setMessageSent(true);
+
+        setLoading(false);
+
+        e.target.reset();
+
+      })
+
+      .catch((error) => {
+
+        console.error(
+          "FAILED...",
+          error
+        );
+
+        alert(
+          "Hubo un error al enviar el mensaje."
+        );
+
+        setLoading(false);
+
+      });
+
   };
 
-  if (messageSent) {
-    return (
-      <section className="page-contact">
-        <p className="mje-success">¡Mensaje enviado exitosamente!</p>
-      </section>
-    );
-  }
+  /* =============================
+     SUCCESS
+  ============================= */
+
+
+
+if (messageSent) {
+  return (
+    <section className="page-contact success-page">
+      <div className="success-card">
+        <img
+          src={logoContact}
+          alt="Mensaje enviado"
+          className="success-logo"
+        />
+
+        <h2 className="success-title">
+          ¡Mensaje enviado!
+        </h2>
+
+        <p className="success-text">
+          Gracias por contactarte conmigo 💛
+        </p>
+
+        <p className="success-text-secondary">
+          Tu mensaje fue enviado correctamente.
+          <br />
+          Te responderé lo antes posible.
+        </p>
+
+        <button
+          className="form-button"
+          onClick={() => setMessageSent(false)}
+        >
+          Enviar otro mensaje
+        </button>
+      </div>
+    </section>
+  );
+}
+
+  /* =============================
+     FORM
+  ============================= */
 
   return (
+
     <section className="page-contact">
+
       <div className="page-left-contact">
+
         <div className="page-left-header">
-          <img src={logoContact} alt="Contacto" id="logo-header" />
-          <h1 className="page-title-contact">Contacto</h1>
+
+          <img
+            src={logoContact}
+            alt="Contacto"
+            id="logo-header"
+          />
+
+          <h1 className="page-title-contact">
+            Contacto
+          </h1>
+
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <p className="page-text">
+          ¿Tenés una propuesta, proyecto
+          o simplemente querés conectar?
+          Podés escribirme a través del formulario.
+        </p>
+
+        <form
+          className="contact-form"
+          onSubmit={handleSubmit}
+        >
+
           <div className="form-group">
-            <label htmlFor="name" />
+
             <input
               type="text"
               id="name"
@@ -58,9 +147,11 @@ function Contact() {
               placeholder="Nombre"
               required
             />
+
           </div>
+
           <div className="form-group">
-            <label htmlFor="email" />
+
             <input
               type="email"
               id="email"
@@ -68,9 +159,11 @@ function Contact() {
               placeholder="E-mail"
               required
             />
+
           </div>
+
           <div className="form-group">
-            <label htmlFor="message" />
+
             <textarea
               id="message"
               name="message"
@@ -78,24 +171,44 @@ function Contact() {
               required
               placeholder="Escribe tu mensaje"
             />
+
           </div>
+
           <div className="form-button-container">
-            <button type="submit" className="form-button" disabled={loading}>
-              {loading ? "Enviando..." : "Enviar Mensaje"}
+
+            <button
+              type="submit"
+              className="form-button"
+              disabled={loading}
+            >
+
+              {loading
+                ? "Enviando..."
+                : "Enviar Mensaje"}
+
             </button>
+
           </div>
+
         </form>
+
       </div>
 
+      {/* RIGHT */}
+
       <div className="page-right-contacto">
+
         <img
           src={logoContact}
           alt="Contacto"
           id="logo-bottom"
           className="img-contacto"
         />
+
       </div>
+
     </section>
+
   );
 }
 
