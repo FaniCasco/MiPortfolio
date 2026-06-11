@@ -1,6 +1,6 @@
 import React from "react";
 import logo2 from "../assets/images/logo-simple.png";
-import cv from "../assets/documents/cv-FaniCasco-mayo2026-.pdf";
+import cv from "../assets/documents/cv-FaniCasco-Junio2026.pdf";
 
 function Hero() {
     return (
@@ -17,7 +17,7 @@ function Hero() {
                     Diseño y desarrollo interfaces claras, funcionales y centradas en la experiencia de usuario.
                 </p>
                 <p className="hero-stack">
-                    UX/UI •  Figma •  React • Vue.Js •  Quasar •  Responsive Design
+                    UX/UI •  Figma •  React • Vue.Js •  Quasar •  Responsive Design • Google Cloud
                 </p>
 
                 <div className="hero-buttons">

@@ -1,4 +1,40 @@
+import insignia1 from "../assets/credenciales/insignia-1.png";
+import insignia2 from "../assets/credenciales/insignia-2.png";
+import insignia3 from "../assets/credenciales/insignia-3.png";
+import insignia5 from "../assets/credenciales/insignia-5.png";
+import insignia6 from "../assets/credenciales/insignia-6.png";
+
 export const CURSOS = [
+  {
+    titulo: "GOOGLE CLOUD DIGITAL LEADER",
+    institucion: "GOOGLE CLOUD",
+    fecha: "En curso",
+    descripcion:
+      "Estoy cursando Google Cloud Digital Leader para fortalecer mi perfil en nube, transformación digital, datos, infraestructura, seguridad y operaciones. Durante el trayecto fui completando insignias que documentan el avance de la formación.",
+    icono: "bi bi-cloud-arrow-up",
+    certificado: [
+      {
+        nombre: "Insignia 1 - Transformación Digital con Google Cloud",
+        url: insignia1,
+      },
+      {
+        nombre: "Insignia 2 - Explora la transformación de datos con Google Cloud",
+        url: insignia2,
+      },
+      {
+        nombre: "Insignia 3 - Moderniza la infraestructura y aplicaciones con Google Cloud",
+        url: insignia3,
+      },
+      {
+        nombre: "Insignia 5 - Confianza y Seguridad con Google Cloud",
+        url: insignia5,
+      },
+      {
+        nombre: "Insignia 6 - Escala con Google Cloud Operations",
+        url: insignia6,
+      },
+    ],
+  },
   {
   titulo: "AUTOMATIZACIÓN CON N8N E IA",
   institucion: "UDEMY",

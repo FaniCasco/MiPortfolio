@@ -57,8 +57,9 @@ function About() {
 
         <p className="page-text">
           Actualmente continúo capacitándome en UX/UI, automatización, Vue.js 3,
-          n8n y herramientas de AI, buscando seguir creciendo profesionalmente
-          dentro de equipos colaborativos, dinámicos y orientados al aprendizaje continuo.
+          n8n, Google Cloud Digital Leader y herramientas de AI, buscando seguir
+          creciendo profesionalmente dentro de equipos colaborativos, dinámicos
+          y orientados al aprendizaje continuo.
         </p>
 
         <p className="page-text">
